@@ -20,7 +20,7 @@
 				};
 				this.config = config;
 				var $container = $(this),
-					slideSelector = '.wd-slide',
+					slideSelector = '.slideshow__slide',
 					fading = false,
 					slideTimer,
 					activeSlide,
@@ -110,7 +110,7 @@
 })(jQuery);
 
 jQuery(function(){
-  jQuery('.slideshow-container').easyFader({
+  jQuery('.slideshow').easyFader({
     slideDur: 6000,
     fadeDur: 800
   });
