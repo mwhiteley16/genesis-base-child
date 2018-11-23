@@ -384,7 +384,7 @@ td {
 }
 /* ---------- 1.6 Forms ---------- */
 input,
-input[type="search"]
+input[type="search"],
 input[type="email"],
 input[type="text"],
 input[type="tel"],
