@@ -341,6 +341,23 @@ img.aligncenter,
      margin-left: auto;
      margin-right: auto;
      display: block;
+	max-width: 100%;
+}
+.wp-caption img.alignright,
+.wp-caption img.alignleft {
+     padding: 0 0 10px 0;
+}
+.wp-caption.alignnone {
+     max-width: 100%;
+}
+p.wp-caption-text {
+	background-color: #fafafa;
+     padding: 7px;
+     text-align: center;
+     font-size: 14px;
+     margin-top: -5px;
+     border: 1px solid #eee;
+     border-top: none;
 }
 .wp-caption.alignnone {
      max-width: 100%;
