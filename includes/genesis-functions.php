@@ -11,13 +11,17 @@ add_action( 'wp_enqueue_scripts', 'wd_genesis_child_stylesheet' );
 function wd_genesis_child_stylesheet() {
 
 	$theme_name = defined('CHILD_THEME_NAME') && CHILD_THEME_NAME ? sanitize_title_with_dashes(CHILD_THEME_NAME) : 'child-theme';
-	$stylesheet_uri = get_stylesheet_directory_uri() . '/style.css';
-	$stylesheet_dir = get_stylesheet_directory() . '/style.css';
-	$last_modified = date ( "njYHi", filemtime( $stylesheet_dir ) );
-
-	wp_enqueue_style( $theme_name, $stylesheet_uri, array(), $last_modified );
+	$version = defined( 'CHILD_THEME_VERSION' ) && CHILD_THEME_VERSION ? CHILD_THEME_VERSION : PARENT_THEME_VERSION;
+	$version .= '.' . date ( "njYHi", filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style( $theme_name, get_stylesheet_uri(), array(), $version );
 
 }
+
+/*
+ * Remove edit link from front end
+ *
+*/
+add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
 /*
  * Rename Genesis Menus
