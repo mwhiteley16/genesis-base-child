@@ -418,6 +418,9 @@ select {
 	width: 100%;
 	margin-bottom: 20px;
 }
+.gform_wrapper ul {
+     margin: 0;
+}
 .gform_wrapper ul li {
 	float: left;
 	width: 100%;
